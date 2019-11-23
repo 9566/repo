@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter First No:<input id="first"><br><br>
+Enter Second No:<input id="second"><br><br>
+<button onclick="Larger()">submit</button>
+<script>
+function Larger(){
+var x,y;
+x=Number(document.getElementById("first").value);
+y=Number(document.getElementById("second").value);
+if((x>=40&&x<=60&& y>=40&& y<=60)||
+  (x>=70&&x<=100&& y>=70&& y<=100))
+  {
+  document.write("true");
+  }
+  else
+  {
+  documnet.write("false");
+  }
+  }
+</script>
+</body>
+</html>

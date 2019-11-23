@@ -1,0 +1,74 @@
+.container1
+{
+	width:100%;
+	float:left;
+	background-color:#323a45;
+	margin:0;
+}
+.menu
+{
+	width:1200px;
+	margin:auto;
+
+}
+.logo 
+{
+	width:25%;
+	float:left;
+}
+h4
+{
+	color:white;
+}
+.menubar
+{
+
+	float:right;
+}
+	
+li
+{
+	float:left;
+	list-style-type:none;
+}
+.menu a
+{
+	color:white;
+	padding:5px 10px;
+	text-decoration:none;
+	float:left;
+}
+.container2
+{
+	width:100%;
+	float:left;
+	background-color:#bf3a2b;
+	margin:0;
+}
+.banner
+{
+	width:1200px;
+	margin:auto;
+	
+}
+.banheading
+{
+	width:30%;
+	background-color:#323a45;
+	padding:10px;
+	border:1px solid black;
+	margin:10px;
+	color:white;
+	font-size:10px;
+}
+.para
+{
+	width:45%;
+	margin:10px;
+	color:white;
+	font-size:20px;
+}
+.bar
+{
+	width:30%;
+	

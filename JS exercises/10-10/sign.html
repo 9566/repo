@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter First No:<input id="first"><br><br>
+Enter Second No:<input id="second"><br><br>
+Enter Third NO:<input id="third"><br><br>
+
+<button onclick="sign()">submit</button>
+<script>
+function sign(){
+var int1,int2,int3;
+int1=Number(document.getElementById("first").value);
+int2=Number(document.getElementById("second").value);
+int3=Number(document.getElementById("third").value);
+if(int1>0&&int2>0&&int3>0)
+{
+alert("The sign is +");
+}
+else
+{
+alert("The sign is -")
+}
+}
+</script>
+</body>
+</html>

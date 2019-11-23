@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+	
+	</head>	
+		<body>
+		
+			<br><br>
+			<input id="text1"><br><br>
+			<input id="text2"><br><br>
+			<input id="text3"><br><br>
+			<input id="text4"><br><br>
+			<input id="text5"><br><br>
+			<button onclick="short()"> click</button>
+			<p id="demo"></p>
+			
+			<script>
+			
+			
+									function short(){
+										var noor1 = document.getElementById("text1").value;
+										var noor2 = document.getElementById("text2").value;
+										var noor3 = document.getElementById("text3").value;
+										var noor4 = document.getElementById("text4").value;
+										var noor5 = document.getElementById("text5").value;
+										
+										if(noor1>noor2 && noor1>noor3 && noor1>noor4 && noor1>noor5) {
+											if (noor1>noor3 && noor1>noor4 && noor1>noor5){
+												
+												if(noor1>noor4 && noor1>noor5){
+													if(noor4>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor2 +","+noor3+","+noor4+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor2 +","+noor3+","+noor5+","+noor4;
+													}
+													
+												}
+												
+											}
+											else if(noor3>noor2 && noor3>noor4 && noor3>noor5){
+												if(noor3>noor4 && noor3>noor5){
+													if(noor4>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor4+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor5+","+noor4;
+													}
+												
+												}
+												
+											}
+											else if(noor4>noor3 && noor4>noor2 && noor4>noor5){
+												if(noor4>noor2 && noor4>noor5){
+													if(noor2>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor4 +","+noor3+","+noor2+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor5+","+noor2;
+													}
+												
+												}
+												
+											}
+											else if(noor5>noor3 && noor5>noor2 && noor5>noor4){
+												if(noor5>noor2 && noor5>noor4){
+													if(noor2>noor4){
+														document.getElementById("demo").innerHTML = noor1+","+noor5 +","+noor3+","+noor2+","+noor4;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor4+","+noor2;
+													}
+												
+												}
+												
+											}
+											
+										}
+										
+										
+										
+										
+										
+										if(noor2>noor1 && noor2>noor3 && noor2>noor4 && noor2>noor5) {
+											if (noor2>noor3 && noor2>noor4 && noor2>noor5){
+												
+												if(noor2>noor4 && noor2>noor5){
+													if(noor2>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor2 +","+noor3+","+noor4+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor2 +","+noor3+","+noor5+","+noor4;
+													}
+													
+												}
+												
+											}
+											else if(noor3>noor2 && noor3>noor4 && noor3>noor5){
+												if(noor3>noor4 && noor3>noor5){
+													if(noor4>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor4+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor5+","+noor4;
+													}
+												
+												}
+												
+											}
+											else if(noor4>noor3 && noor4>noor2 && noor4>noor5){
+												if(noor4>noor2 && noor4>noor5){
+													if(noor2>noor5){
+														document.getElementById("demo").innerHTML = noor1+","+noor4 +","+noor3+","+noor2+","+noor5;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor5+","+noor2;
+													}
+												
+												}
+												
+											}
+											else if(noor5>noor3 && noor5>noor2 && noor5>noor4){
+												if(noor5>noor2 && noor5>noor4){
+													if(noor2>noor4){
+														document.getElementById("demo").innerHTML = noor1+","+noor5 +","+noor3+","+noor2+","+noor4;
+													}
+													else{
+														document.getElementById("demo").innerHTML = noor1+","+noor3 +","+noor2+","+noor4+","+noor2;
+													}
+												
+												}
+												
+											}
+											
+										}
+										
+										
+										
+										
+										if(noor3>noor2 && noor3>noor1) {
+											if (noor2>noor1){
+												document.getElementById("demo").innerHTML=noor3+","+noor2 +","+noor1;
+											
+											}
+											else{
+											
+												document.getElementById("demo").innerHTML=noor3+","+noor1 +","+noor2;
+											}
+										}
+										
+										
+										
+										
+									}
+				</script>					
+			
+		
+		
+		</body>
+	
+	
+	</html>

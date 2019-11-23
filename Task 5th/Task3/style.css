@@ -1,0 +1,84 @@
+body{
+	padding:0;
+	margin:0;
+	font-size:10px;
+
+	
+
+}
+.body1{
+width:1000px;
+border:1px solid black;
+margin:auto;
+display:grid;
+}
+.box1{
+margin:5px 10px;
+text-align:center;
+background-color:#00bfcc;
+color:Black;
+font-family:Verdana;
+border:1px solid black;
+}
+mark{
+	color:#02b77b;
+}
+.box2{
+margin:5px 10px;
+text-align:center;
+background-color:#cd0000;
+color:white;
+border:1px solid black;
+}
+.box3{
+margin:5px 10px;
+text-align:center;
+background-color:#b122aa;
+color:white;
+border:1px solid black;
+}
+.box3 p
+{
+	text-align:left;
+	font-size:15px;
+	float:right;
+	
+	
+}
+.boxhead{
+width:100%;
+
+}
+.box4
+{
+	width:31.1%;
+	height:auto;
+	margin:5px 10px;
+text-align:center;
+background-color:#00b7cd;
+color:#1802b7;
+float:left;
+border:1px solid black;
+}
+.box5
+{
+	width:47.7%;
+	height:100px;
+	margin:5px 10px;
+text-align:center;
+background-color:#00cd5c;
+color:black;
+float:left;
+border:1px solid black;
+}
+.box6
+{
+	width:22.7%;
+	height:auto;
+	margin:5px 10px;
+text-align:center;
+background-color:#430202;
+color:white;
+float:left;
+border:1px solid black;
+}

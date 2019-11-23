@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter string:<input id="letter">
+<button onclick="remove()">click me</button>
+<script>
+function remove(str1) 
+ {
+ var x;
+ str1=document.getElementById("letter").value;
+ x=str1.charAt(0);
+ alert(x+str1+x);
+  //return (x+str1+x);
+document.write(x+str1+x);
+}
+</script>
+</body>
+</html>

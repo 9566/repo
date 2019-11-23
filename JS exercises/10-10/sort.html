@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<p>Click the button to sort the array</p>
+<button onclick="sorting()">submit</button>
+<p id="demo"></p>
+<script>
+var number=[3,-7,2];
+document.getElementById("demo").innerHTML = number;
+function sorting(){
+number.sort(function(a, b){return a - b});
+  document.getElementById("demo").innerHTML = number;
+}
+</script>
+</body>
+</html>

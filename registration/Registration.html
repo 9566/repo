@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register</title>
+<link href="myStyle.css" rel="stylesheet">
+</head>
+<body>
+<form>
+<h1>Registration Form</h1>
+<div class="form-style">
+Name:<br><input type="text" id="name"><br><br>
+Gender:<br><input type="radio" id="fe" value="female">Female
+<input type="radio" id="ma" value="male">Male<br>
+Address:<br><textarea id="addr" rows="3" col="10"></textarea><br><br>
+E-mail<br>Address:
+<br><input type="text" id="mail"><br><br>
+
+Password:<br><input type="password" id="pswd"><br><br>
+Telephone:<br><input type="number" id="tele"><br><br>
+Select Course:<br><select id="course">
+<option value="">Select</option>
+<option value="1">B.tech</option>
+<option value="2">BBA</option>
+<option value="3">B.E</option>
+</select><br><br>
+Do You Have Vechicle:
+<br><input type="checkbox" value="1" id="bike">I have a Bike
+<br><input type="checkbox" value="2" id="car">I have a Car
+<br><input type="checkbox" value="3" id="cycle">I have a Cycle<br><br>
+Comments:<br><textarea id="cmd" rows="3" cols="20"></textarea><br>
+<button onclick="Nasrin()">Validate</button>
+<button onclick="Nilofar()">Reset</button>
+<script>
+function Nasrin(){
+var message="";
+var line="\n";
+var success="";
+var name=document.getElementById("name").value;
+var genderfe=document.getElementById("fe");
+var genderma=document.getElementById("ma");
+var address=document.getElementById("addr").value;
+var Email=document.getElementById("mail").value;
+var mail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+var password=document.getElementById("pswd").value;
+var telephone=document.getElementById("tele").value;
+var course=document.getElementById("course");
+var box1=document.getElementById("bike");
+var box2=document.getElementById("car");
+var box3=document.getElementById("cycle");
+var comment=document.getElementById("cmd").value;
+if(name==""){
+message+=message+"Please Enter Your Name"+line;}
+if((genderfe.checked==false) && (genderma.checked==false))
+{
+message+="Please Enter your Gender"+line;
+}
+if(address==""){
+message+="Please Enter Your Address"+line;
+}
+if(Email==""){
+message+="Please Enter mail address"+line;
+}
+else if(!Email.match(mail))
+{
+message+="Enter an valid Email address"+line;
+}
+if(password=="")
+{
+message+="Please Enter a Password"+line;
+}
+else if(!password.match((/[0-9]/g) && password.match(/[^a-zA-Z\d]/g) && password.length >= 8 && password.match(/[!@#\$%\^&]/g)))
+{
+message+="Please Enter valid password"+line;
+}
+if(telephone=="")
+{
+message+="Please Enter a Number"+line;
+}
+else if(telephone.length!=10)
+{
+message+="Please Enter a valid Number"+line;
+}
+if(course.value=="")
+{
+message+="Please select a course"+line;
+}
+
+if((box1.checked==false)&&(box2.checked==false)&&(box3.checked==false))
+{
+message+="Please Select vechicle"+line;
+}
+if(comment=="")
+{
+message+="Please enter a comment"+line;
+}
+else if(comment.length>200)
+{
+message+="Please enter a comment within limit"+line;
+}
+if(message=="")
+{
+alert("Validation Successful");
+success="Given values"+line;
+success+="Name :"+name+line;
+var gender="";
+if(genderfe.checked==true)
+{
+gender=genderfe.value;
+}
+else if(genderma.checked==true)
+{
+gender=genderma.value;
+}
+success+="Gender :"+gender+line;
+success+="Address :"+address+line;
+success+="Email :"+Email+line;
+success+="Password :"+password+line;
+success+="Telephone :"+telephone+line;
+success+="Course :"+course+line;
+var vechicle="";
+if(box1==checked)
+if(vechicle!="")
+{
+vechicle+=","+box1.value;
+}
+else{
+vechicle+=box1.value;
+}
+if(box2==checked)
+{
+vechicle+=","+box2.value
+}
+else{
+vechicle+=box2.value;
+}
+if(box3==checked)
+{
+vechicle+=","+box3.value;
+}
+success+="Vechicle :"+vechicle+line;
+success+="Comments :"+comment+line;
+alert(success);
+}
+else{
+alert(message);
+}
+}
+function Nilofar(){
+document.getElementById("name").value="";
+	document.getElementById("ma").checked=false;
+	document.getElementById("fe").checked=false;
+	document.getElementById("addr").value="";
+	document.getElementById("mail").value="";
+	document.getElementById("pswd").value="";
+	document.getElementById("tele").value="";
+	document.getElementById("course").value="";
+	document.getElementById("bike").checked=false;
+	document.getElementById("car").checked=false;
+	document.getElementById("cycle").checked=false;
+	document.getElementById("cmd").value="";
+
+
+}
+</script>
+</html>

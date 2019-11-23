@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter First No:<input id="first"><br><br>
+Enter Second No:<input id="second"><br><br>
+<button onclick="Larger()">submit</button>
+<p id="result"></p>
+<script>
+function Larger(){
+var int1,int2;
+int1=Number(document.getElementById("first").value);
+int2=Number(document.getElementById("second").value);
+if((int1>=50 ||int1<=99)||(int2>=50 || int2<=99))
+{
+document.getElementById("result").innerHTML="Given number is True";
+}
+else
+{
+document.getElementById("result").innerHTML="Given number is False";
+}
+}
+</script>
+</body>
+</html>

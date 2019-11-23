@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter string:<input id="first"><br><br>
+<button onclick="Larger()">submit</button>
+<script>
+function Larger(){
+var str,x,y,z;
+str=Number(document.getElementById("first").value);
+if(str.length<3){
+x=str.toUpperCase();
+document.write(x);
+  }
+  else{
+  y=(str.substring(0,3).toLowerCase());
+  z=y+(str.substring(3,str.length));
+  }
+  }
+</script>
+</body>
+</html>

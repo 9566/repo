@@ -1,0 +1,238 @@
+.topbar
+{
+	width:100%;
+	margin:0;
+	float:left;
+	background-color:#2d3e50;
+}
+.container
+{
+	width:1200px;
+	margin:auto;
+	
+}
+.topbar1
+{
+	width:30%;
+	float:left;
+	padding:10px;
+}
+.topbar1 h3
+{
+	font-size:15px;
+	color:white;
+}
+.topbar2
+{
+	width:60%;
+	float:right;
+	padding:10px;
+}
+.topbar2 ul
+{
+
+	list-style-type:none;
+	float:right;
+}
+.topbar2 li
+{
+	float:left;
+}
+.topbar2 a
+{
+	text-decoration:none;
+	color:white;
+	padding:0px 15px;
+	font-size:10px;
+	
+}
+.banner
+{
+	width:100%;
+	margin:0;
+	background-color:#18bb9c;
+	text-align:center;
+	height:370px;
+}
+.profile 
+{
+	text-align:center;
+}
+.profile img
+{
+	width:100px;
+	padding:10px;
+}
+.banner h1
+{
+	color:white;
+	padding:o;
+	margin:0;
+
+}
+hr
+{
+width:10%;
+color:white;
+}
+.banner p
+{
+	color:white;
+
+}
+.image
+{
+	width:100%;
+	margin:0;
+	background-color:white;
+	text-align:center;
+}
+.image h3
+{
+	text-align:center;
+}
+.imagetop
+{
+	width:100%;
+	margin:0;
+	background-color:white;
+}
+
+.imagetop img
+{
+	width:30%;
+	!padding:22px 10px;
+	margin:10px;
+	!float:left;
+	
+	
+}
+.about
+{
+	width:100%;
+	margin:0;
+	background-color:#18bb9c;
+	text-align:center;
+	height:250px;
+}
+.about h3{
+	padding:10px;
+}
+.about p
+{
+	text-align:justify;
+	font-size:10px;
+	font-family:verdana;
+	padding-top:0px;
+}
+.about button
+{
+	background-color:#18bb9c;
+	border:1px solid white;
+	color:white;
+	padding:5px 10px;
+
+	
+}
+.about1
+{
+	width:40%;
+	float:left;
+	padding:20px;
+	margin-left:20px;
+	padding-top:0px;
+}
+.container1
+{
+	width:800px;
+	margin:auto;
+	
+}
+
+.about2
+{
+	width:40%;
+	float:left;
+	padding:20px;
+	margin-right:20px;
+	padding-top:0px;
+	
+}
+
+.contact
+{
+	width:100%;
+	margin:0;
+	float:left;
+	background-color:white;
+	padding:20px;
+}
+.contact h3{
+	text-align:center;
+}
+
+.contact button
+{
+	background-color:#18bb9c;
+	padding:5px 20px;
+	color:white;
+	border:1px solid white;
+}
+input {
+  width: 49%;
+!padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border:none;
+}
+.footertop
+{
+	width:100%;
+	margin:0;
+	float:left;
+	background-color:#2d3e50;
+	text-align:center;
+	padding:20px;
+}
+.location
+{
+	width:33%;
+	color:white;
+	float:left;
+}
+.location h5
+{
+	color:white;
+	font-family:verdana;
+	font-size:20px;
+}
+.location p
+{
+	margin:0px;
+}
+.location img
+{
+	width:25px;
+}
+span
+{
+	color:#18bb9c;
+}
+.footer
+{
+	width:100%;
+	margin:0;
+	float:left;
+	background-color:#243141;
+}
+.copyright
+{
+	text-align:center;
+	color:white;
+	
+}
+.copyright img
+{
+width:10px;
+}
+

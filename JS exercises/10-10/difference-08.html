@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+Enter No:<input id="first"><br><br>
+<button onclick="Larger()">submit</button>
+<p id ="result"></p>
+<script>
+function Larger(){
+var no,res,res1;
+no=Number(document.getElementById("first").value);
+if(no<=13)
+{
+res=13-no;
+document.getElementById("result").innerHTML="Difference Number is:" +res;
+}
+else
+{
+res1=(no-13)*2;
+document.getElementById("result").innerHTML="Double Number is:" +res1;
+}
+}
+</script>
+</body>
+</html>

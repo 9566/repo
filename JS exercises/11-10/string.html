@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter string<input id="first"><br><br>
+<button onclick="Larger()">submit</button>
+<p id="result"></p>
+<script>
+function Larger(){
+var str;
+str=(document.getElementById("first").value);
+if((str===null)||(str===undefined)||(str.substring(0,2)==="py"))
+{
+alert(str);
+document.getElementById("result").innerHTML=str;
+}
+else
+{
+document.getElementById("result").innerHTML="py"+str;
+}
+}
+</script>
+</body>
+</html>

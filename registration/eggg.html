@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+Name: <br><input type="text" id="name1" required>
+Gender:<br><input type="radio" name="gender" value="male" id="male" > Male
+			<input type="radio" name="gender" value="female" id="female"> Female
+			
+    <script type = "text/javascript">
+        function DisplayMultiLineAlert() {
+		var name=document.getElementById("name1").value;
+		var letters = /^[A-Za-z]+$/;
+		var message="";
+		var newLine="\n";
+		var genderM=document.getElementById("male");
+		var genderF=document.getElementById("female");
+		var successmessage="";
+		if(name==""){
+		message+="Please Enter your Name" +newLine;
+	
+		}
+		else if(!name.match(letters)){
+		message+="Name should have only alphabets" +newLine;
+		}
+
+		if((genderM.checked==false)&&(genderF.checked==false)){
+		message+="Please select gender" +newLine;
+        }
+		if(message==""){
+			alert("Validation Successful");
+			
+			successmessage+="Given Values"+newLine;
+			successmessage+="Name : "+name +newLine;
+			var gender="";
+			if(genderF.checked==true){
+			gender=genderF.value;
+			}
+			else if(genderM.checked==true)
+			{
+			gender=genderM.value;
+			}
+			successmessage+="Gender : "+gender;
+			alert(successmessage);
+			}
+		
+		else {
+			alert(message);
+			
+		}
+		
+		
+}
+    </script>
+    <input type = "button" value = "Show Message" onclick = "DisplayMultiLineAlert()" />
+</body>
+</html>

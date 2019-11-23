@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter string :<input id="first"><br><br>
+<button onclick="Larger()">submit</button>
+<p id="result"></p>
+<script>
+function Larger(){
+var x;
+x=(document.getElementById("first").value);
+
+if(x=='java')
+{
+document.getElementById("result").innerHTML="Given string is True";
+}
+else
+{
+document.getElementById("result").innerHTML="Given string is False";
+}
+}
+</script>
+</body>
+</html>

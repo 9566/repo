@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<button onclick="validatePrice()">click</button>
+<script type="text/javascript">
+function validate() {
+    return [
+        document.form.price,
+        document.form.price2,
+        document.form.price3,
+        document.form.price4,
+        document.form.price5
+    ].every(validatePrice)
+}
+
+function validatePrice(price)
+{
+    if (price.value == "") {
+        alert("Please enter a price");
+        price.focus();
+        return false;
+    }
+    if (price.value !== "") {
+        if (! (/^\d*(?:\.\d{0,2})?$/.test(price.value))) {
+            alert("Please enter a valid price");
+            price.focus();
+            return false;
+        }
+    }
+    return true;       
+}
+</script>	
+    
+</body>
+</html>

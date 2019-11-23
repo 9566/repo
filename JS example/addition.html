@@ -1,0 +1,54 @@
+ <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+var d="";
+function Addition()
+{
+var a,b,c,e;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c=a+b;
+e="the result is:"+c +"<br>";
+d=d+e;
+document.getElementById("r").innerHTML=d;
+}
+function subtraction()
+{
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c=a-b;
+document.getElementById("r").innerHTML="The Result is:" +c;
+}
+function Multiplication()
+{
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c=a*b;
+document.getElementById("r").innerHTML="The Result is:" +c;
+}
+function Division()
+{
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c=a/b;
+document.getElementById("r").innerHTML="The Result is:" +c;
+}
+
+
+</script>
+1st Number:<input id="first"><br><br>
+2nd Number:<input id="second"><br><br>
+<button onclick="Addition()">Addition</button>
+<button onclick="subtraction()">subtraction</button>
+<button onclick="Multiplication()">Multiplication</button>
+<button onclick="Division()">Division</button>
+<p id ="r"></p>
+
+</body>
+</html>

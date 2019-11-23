@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Form</title>
+			<link href="style.css" rel="stylesheet">
+		</head>
+		<body>
+		
+		<h1>REGISTRATION FORM</h1>
+		<div class="form-type">
+			Name: <br><input type="text" id="name">
+		</div>	
+			Gender:<br><input type="radio" name="gender" value="male" id="male" > Male
+			<input type="radio" name="gender" value="female" id="female"> Female
+			<div class="form-type">
+			Address: <br><textarea id="address" rows="5" cols="55"></textarea><br>
+			
+			Email <br>Address: <br><input type="email" id="email">
+			Password: <br><input type="password" id="pass">
+			Telephone: <br><input type="tel" id="tele">
+		</div><br>
+			Vehicles:<br>
+			<input type="checkbox" id="checkbox1"name="vehicle1" value="Bike"> I have a bike<br>
+			<input type="checkbox" id="checkbox2"name="vehicle2" value="Car"> I have a car<br>
+			<input type="checkbox" id="checkbox3"name="vehicle3" value="Boat" > I have a boat<br>
+			<input type="checkbox" id="checkbox4"name="vehicle4" value="no vehicle" > I have no vehicle<br><br>
+			
+			Interested Sports:<br><br><select id="sports" multiple>
+			<option selected value="">--select--</option>
+			<option value="1">Badminton</option>
+			<option value="2">football</option>
+			<option value="3">Golf</option>
+			<option value="4">Basketball</option>
+
+			</select><br><br>
+
+			
+		<div class="form-type">
+	
+			SELECT YOUR <br> COURSE<br>
+			<select id="course" >
+				<option selected value="">-- select --</option>
+				<option value="1">BTECH</option>
+				<option value="2">BBA</option>
+				<option value="3">BCA</option>
+				<option value="4">BCOM</option>
+				<option value="5">GEEK FOR GEEKS</option>
+			</select><br><br>
+			Comments: <br><textarea id="comm" rows="5" cols="55"></textarea>
+		</div><br>
+			<button  onclick="devi()">validate</button>
+			<button onclick="reset()">reset</button>
+	
+		
+		<script>
+function devi(){
+		var name=document.getElementById("name").value;
+		var letters = /^[A-Za-z]+$/;
+		var message="";
+		var newLine="\n";
+		var genderM=document.getElementById("male");
+		var genderF=document.getElementById("female");
+		var street=document.getElementById("address").value;
+		var email=document.getElementById("email").value;
+		var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+		var password=document.getElementById("pass").value;
+		var telephone=document.getElementById("tele").value;
+		  var phoneno = /[^A-Za-z]+/g;
+		  
+		 var drop=document.getElementById("course");
+		var comm1=document.getElementById("comm").value;
+		var multi=document.getElementById("sports");
+		var box1=document.getElementById("checkbox1");
+		var box2=document.getElementById("checkbox2");
+		var box3=document.getElementById("checkbox3");
+		var box4=document.getElementById("checkbox4");
+		var successmessage="";
+
+		if(name==""){
+		message+="Please Enter your Name" +newLine;
+	
+		}
+		else if(!name.match(letters)){
+		message+="Name should have only alphabets" +newLine;
+		}
+
+		if((genderM.checked==false)&&(genderF.checked==false)){
+		message+="Please select gender" +newLine;
+        }
+		if(street==""){
+		message+="Please Enter your Address" +newLine;
+		}
+		if(email==""){
+		message+="Please Enter your Email" +newLine;
+		}
+	   else if(!email.match(mailformat)){
+		message+="Enter valid Email-id format"+newLine;
+		}
+		if(password==""){
+		message+="Enter Your Password" +newLine;
+		}
+		else if (!(password.match(/[0-9]/g) && password.match(/[^a-zA-Z\d]/g) && password.length >= 8 && password.match(/[!@#\$%\^&]/g))) {
+              message+="Password must contain at least one number,one special character,one alphabet and at least 8 or more characters" +newLine; 
+            }
+		if(telephone==""){
+		message+="Enter Your phone Number" +newLine;
+		}
+		 else if(!telephone.match(phoneno)){
+		message+="Phone Number should have only Number"+newLine;
+		}
+		else if(telephone.length != 10){
+		message+="Phone number should have length of 10 digits" +newLine;
+		}
+		
+		if(box1.checked==false&& box2.checked==false&&box3.checked==false&&box4.checked==false){
+		message+="Please select any Vehicle" +newLine;
+		}
+		
+		if(multi.value==""){
+		message+="Please Select Any Sports"+newLine;
+		}
+		
+		
+		var text = getSelectedOptions(document.getElementById("sports"));;
+		
+		if(drop.value=="")
+                {
+                    message+="Please select any course"+newLine;
+                }
+
+				var text1 = drop.options[drop.selectedIndex].text;
+
+		if(comm1==""){
+		message+="Please Enter Your comments"+newLine;
+		}
+		else if(comm1.length>=200){
+		message+="Enter characters below 200"+newLine;
+		}
+				
+		if(message==""){
+			alert("Validation Successful");
+			
+			successmessage+="Given Values"+newLine;
+			successmessage+="Name : "+name +newLine;
+			var gender="";
+			if(genderF.checked==true){
+			gender=genderF.value;
+			}
+			else if(genderM.checked==true)
+			{
+			gender=genderM.value;
+			}
+			var vehicle="";
+			if(box1.checked==true){
+			vehicle+=box1.value+",";
+			}
+			if(box2.checked==true){
+			vehicle+=box2.value+ ",";
+			}
+			if(box3.checked==true){
+			vehicle+=box3.value+ ",";
+			}
+		    if(box4.checked==true){
+			vehicle+=box4.value;
+			}
+
+			
+			successmessage+="Gender : "+gender +newLine;
+			successmessage+="Address : "+street +newLine;
+			successmessage+="Email : "+email +newLine;
+			successmessage+="Password : "+password +newLine;
+			successmessage+="Telephone No : "+telephone +newLine;
+			successmessage+="Vehicle Type: "+vehicle +newLine;
+			successmessage+="Interested sports: "+text +newLine;
+			successmessage+="Selected course: "+text1 +newLine;
+			successmessage+="Comments: "+comm1 +newLine;
+		     alert(successmessage);
+			}
+		else {
+			alert(message);	
+		}
+
+}
+function getSelectedOptions(sel) {
+    var opts = [], opt;
+    
+    // loop through options in select list
+    for (var i=0;i<sel.options.length; i++) {
+        opt = sel.options[i];
+        
+        // check if selected
+        if ( opt.selected ) {
+            // add to array of option elements to return from this function
+            opts.push(opt.text);
+            
+        }
+    }
+    
+    // return array containing references to selected option elements
+    return opts;
+}
+
+function reset(){
+document.getElementById("name").value="";
+document.getElementById("male").checked=false;
+document.getElementById("female").checked=false;
+document.getElementById("address").value="";
+document.getElementById("email").value="";
+document.getElementById("pass").value="";
+document.getElementById("tele").value="";
+document.getElementById("checkbox1").checked=false;
+document.getElementById("checkbox2").checked=false;
+document.getElementById("checkbox3").checked=false;
+document.getElementById("checkbox4").checked=false;		
+document.getElementById("course").value="";
+document.getElementById("comm").value="";
+document.getElementById("sports").value="";
+		
+}
+		</script>
+		</body>
+	</html>

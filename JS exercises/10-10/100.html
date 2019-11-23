@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+Enter First No:<input id="first"><br><br>
+Enter Second No:<input id="second"><br><br>
+<button onclick="Larger()">submit</button>
+<script>
+function Larger(x1,y1){
+var int1,int2;
+int1=Number(document.getElementById("first").value);
+int2=Number(document.getElementById("second").value);
+if(int1!=int2)
+{
+x1=Math.abs(int1-100);
+y1=Math.abs(int2-100);
+}
+if(x1>y1)
+{
+document.write(int1);
+}
+else if(y1>x1)
+{
+document.write(int2);
+}
+else
+document.write ("false");
+}
+
+</script>
+</body>
+</html>

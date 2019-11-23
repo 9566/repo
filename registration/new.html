@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<input type = "button" value = "Show Message" onclick = "DisplayMultiLineAlert()" />
+Vehicles:<br>
+			<input type="checkbox" id="checkbox1"name="vehicle1" value="Bike"> I have a bike<br>
+			<input type="checkbox" id="checkbox2"name="vehicle2" value="Car"> I have a car<br>
+			<input type="checkbox" id="checkbox3"name="vehicle3" value="Boat" > I have a boat<br>
+			<input type="checkbox" id="checkbox4"name="vehicle4" value="no vehicle" > I have no vehicle<br><br>
+			
+		
+    <script type = "text/javascript">
+        function DisplayMultiLineAlert() {
+			var message="";
+			var successMessage="";
+			var newLine="\n";
+			var bike=document.getElementById("checkbox1");
+			var car=document.getElementById("checkbox2");
+			var boat=document.getElementById("checkbox3");
+			var noVehicle=document.getElementById("checkbox4");
+			
+			if(bike.checked==false&& car.checked==false&&boat.checked==false&&noVehicle.checked==false){
+			message+="Please select any Vehicle" +newLine;
+			}
+			
+			if(message==""){
+				alert("Validation Successful");
+				
+				successMessage+="Given Values" +newLine;
+				var selectedVehicles="";
+				if(bike.checked==true){
+				
+					if(selectedVehicles!=""){
+					selectedVehicles+=","+ bike.value;
+					}
+					else{
+					selectedVehicles+=bike.value;
+					}
+				}
+				
+				if(car.checked==true){
+				
+					if(selectedVehicles!=""){
+					selectedVehicles+=","+ car.value;
+					}
+					else{
+					selectedVehicles+=car.value;
+					}
+				
+				}
+				
+				if(boat.checked==true){
+				
+					if(selectedVehicles!=""){
+					selectedVehicles+=","+ boat.value;
+					}
+					else{
+					selectedVehicles+=boat.value;
+					}
+					
+				}
+				
+				if(noVehicle.checked==true){
+				
+					if(selectedVehicles!=""){
+					selectedVehicles+=","+ noVehicle.value;
+					}
+					else{
+					selectedVehicles+=noVehicle.value;
+					}
+					
+				}
+				
+				successMessage+="Vehicle Type: "+selectedVehicles +newLine;
+				alert(successMessage);
+				
+			}
+			else{
+			alert(message);
+			}
+		}
+		
+    </script>
+    </body>
+</html>

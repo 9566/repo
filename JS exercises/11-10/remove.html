@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+<script>
+function remove(str,char1) 
+ {
+ var str1,str2;
+  str1= str.substring(0, char1);
+  str2 = str.substring(char1 + 1, str.length);
+  return (str1+str2);
+ }
+console.log(remove("Python",0));
+console.log(remove("Python",3));
+console.log(remove("Python",5));
+
+
+</script>
+</body>
+</html>
